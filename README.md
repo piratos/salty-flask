@@ -10,5 +10,5 @@ This is a salt formula that installs apache and configure it to run a given flas
 * [x] Configure apache
 * [x] COnfigure mod-wsgi
 * [x] Use virtualenv to separate the project dependies
-* [ ] Use salt pillar for os-linked packages and apache configuration
+* [ ] Use salt pillar for os-linked packages and apache configuration (Fix pillar top grains)
 * [ ] Use reactor to trigger auto deployment
