@@ -13,6 +13,6 @@ virtualenv_install:
     virtualenv.managed:
         - system_site_packages: False
         - requirements: /var/www/app/requirements.txt
-        - name: /var/www/app
+        - name: {{pillar['app_path']}}
         - require:
             - dependencies

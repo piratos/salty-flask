@@ -1,8 +1,8 @@
 apache_wsgi_package:
     pkg.installed:
-            - name: libapache2-mod-wsgi
+            - name: {{ pillar['modwsgi']}}
             - require:
-                    - pkg: apache2
+                    - pkg: {{ pillar['apache']}}
 
 /etc/apache2/sites-enabled/000-default.conf:
     file.managed:
@@ -10,7 +10,8 @@ apache_wsgi_package:
             - user: root
             - group: root
             - mode: 655
+            - template: jinja
 apache2_service_up:
     service:
-        - name: apache2
+        - name: {{ pillar['apache']}}
         - running

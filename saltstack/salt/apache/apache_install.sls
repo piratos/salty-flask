@@ -1,4 +1,8 @@
 apache2:
-        pkg:
-            - installed
-
+    pkg:
+        - installed
+        - name: {{ pillar['apache']}}
+git:
+    pkg:
+        - installed
+        - name: {{pillar['git']}}
