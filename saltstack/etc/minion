@@ -6,4 +6,4 @@ file_roots:
 
 pillar_roots:
   base:
-    - /vagrant/saltstack/pillar
+    - /vagrant/saltstack/salt/pillar
