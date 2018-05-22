@@ -5,9 +5,10 @@ dependencies:
             - python-pip
             - python-virtualenv
 
-/var/www/app:
+project_source:
     file.recurse:
         - source: salt://source/app
+        - name: {{pillar['app_path']}}
 
 virtualenv_install:
     virtualenv.managed:
